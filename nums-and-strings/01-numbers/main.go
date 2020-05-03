@@ -16,6 +16,12 @@ import (
 	"github.com/fpdevil/learngo/nums-and-strings/01-numbers/exercises"
 )
 
+//------------------------------------
+// Running:
+// go run main.go sphere 10
+// go run main.go
+//------------------------------------
+
 func main() {
 	exercises.Exercise1()
 	exercises.Exercise2()
