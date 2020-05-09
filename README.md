@@ -85,6 +85,15 @@ fmt.Println(a, b, c, d)
 // previous value of iota
 ```
 
++ _nil_ value:
+  `nil` is a predeclared identifier in `go` similar to other predeclared identifiers like `true`, `false`, `float64` etc. It can be used anywhere without any special packages.
+  Analogically it's similar to the below in other languages
+  - `java: null`
+  - `python: None`
+  - `javascript: null` ...
+
+	All `nil` means is that there does not exist any particular value, but `nil` itself is the value. It's a special value which says there is no value.
+
 
 [repository]: <github.com/inancgumus/learngo>
 
