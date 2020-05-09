@@ -91,7 +91,7 @@ func Exercise9(ystr string) {
 	fmt.Println("---- 11-if/09-days-in-month Exercise: Days in a Month ----")
 
 	args := strings.Split(ystr, ",")
-	fmt.Println("argument string: ", args, "length: ", len(args))
+	// fmt.Println("argument string: ", args, "length: ", len(args))
 
 	if ystr == "" {
 		fmt.Println("Give me a month name")
