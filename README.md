@@ -8,7 +8,7 @@ Contains progress of my work in the course and the exercises...
 ## Exercises and content
 
 
-All exercises and course contents are available in the instructors `learngo`  [repository]
+All exercises and course contents are available in the instructors [`learngo`] repository
   
 
 ## Additional stuff...
@@ -131,6 +131,6 @@ items = [3]float64 {
 ```
 
 
-[repository]: <github.com/inancgumus/learngo>
+[learngo]: (https://github.com/inancgumus/learngo){:target="_blank"}
 
-[udemy]: <www.udemy.com/course/learn-go-the-complete-bootcamp-course-golang>
+[udemy]: www.udemy.com/course/learn-go-the-complete-bootcamp-course-golang
