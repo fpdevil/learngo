@@ -130,6 +130,6 @@ items = [3]float64 {
 }
 ```
 
-[learngo]: (https://github.com/inancgumus/learngo){:target="_blank"}
+[learngo]: https://github.com/inancgumus/learngo
 
 [udemy]: www.udemy.com/course/learn-go-the-complete-bootcamp-course-golang
