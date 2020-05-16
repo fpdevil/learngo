@@ -15,13 +15,13 @@ All the digits may be put into an array
 
 ## As per the course outline, the below pointers can be used to print the digits side-by-side.
 
-     + Loop for all the lines in a digit
++ Loop for all the lines in a digit
 
-     + Print each digit line by line
++ Print each digit line by line
 
-     + Don't forget printing a space after each digit
++ Don't forget printing a space after each digit
 
-     + Don't forget printing a newline after each line
++ Don't forget printing a newline after each line
 
      EXAMPLE: Let's say you want to print 10.
 
