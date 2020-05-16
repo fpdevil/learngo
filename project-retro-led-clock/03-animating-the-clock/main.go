@@ -3,6 +3,9 @@ package main
 import (
 	"fmt"
 	"time"
+
+	// package for clearing the screen
+	"github.com/inancgumus/screen"
 )
 
 // STEP #3 — Animate the Clock
@@ -124,28 +127,39 @@ func main() {
 		"   ",
 	}
 
-	// get the current time
-	t := time.Now()
-	hour, minute, second := t.Hour(), t.Minute(), t.Second()
+	// clear all the characters on the screen
+	screen.Clear()
 
-	fmt.Printf("Time: 	%v:%v:%v\n", hour, minute, second)
-	fmt.Println()
+	// creting an infinite loop for animating
+	for {
+		// Moves the cursor to the top-left position of the screen
+		screen.MoveTopLeft()
 
-	// and seconds for  clock time with separator, we  need eight placeholder
-	// create a clock array using  placeholder matching the time hour, minute
-	// values for 6 digits and 2 separators
-	clock := [...]placeholder{
-		digits[hour/10], digits[hour%10],
-		sep,
-		digits[minute/10], digits[minute%10],
-		sep,
-		digits[second/10], digits[second%10],
-	}
+		// get the current time
+		t := time.Now()
+		hour, minute, second := t.Hour(), t.Minute(), t.Second()
 
-	for row := range clock[0] {
-		for digit := range clock {
-			fmt.Printf("%5s", clock[digit][row])
+		// fmt.Printf("Time: 	%v:%v:%v\n", hour, minute, second)
+
+		// and seconds for  clock time with separator, we  need eight placeholder
+		// create a clock array using  placeholder matching the time hour, minute
+		// values for 6 digits and 2 separators
+		clock := [...]placeholder{
+			digits[hour/10], digits[hour%10],
+			sep,
+			digits[minute/10], digits[minute%10],
+			sep,
+			digits[second/10], digits[second%10],
+		}
+
+		for row := range clock[0] {
+			for digit := range clock {
+				fmt.Printf("%5s", clock[digit][row])
+			}
+			fmt.Println()
 		}
 		fmt.Println()
+		// sleep for every 1 second
+		time.Sleep(time.Second * 1)
 	}
 }

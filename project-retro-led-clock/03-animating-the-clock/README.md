@@ -43,3 +43,6 @@ The following are the steps to be followed in order to achieve the goal as per t
 # Output of the code run.
 
 Here is the output generated after running the code using the specifications.
+It clears the screen after every 1 second and moves the cursor to the top left and re-writes the time on the screen giving an impression that the time is being updated in place.
+
+![alt text](output.png "Screenshot of the output from running.")
