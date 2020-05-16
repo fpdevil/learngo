@@ -84,6 +84,7 @@ func Exercise12(vals string) {
 	nlen = len(nums)
 	for range nums {
 		for i, v := range nums {
+			// index under the length and the value more than next
 			if i < nlen-1 && v > nums[i+1] {
 				// fmt.Printf("index: %d, is %f > %f\n", i, v, nums[i+1])
 				nums[i], nums[i+1] = nums[i+1], nums[i]

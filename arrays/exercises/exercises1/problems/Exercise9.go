@@ -63,9 +63,9 @@ func Exercise9(vals string) {
 	}
 
 	const (
-		EUR = iota
-		GBP
-		JPY
+		EUR = iota // 0
+		GBP        // 1
+		JPY        // 2
 	)
 
 	// using an array with keyed elements and the contants
