@@ -8,7 +8,7 @@ Contains progress of my work in the course and the exercises...
 ## Exercises and content
 
 
-All exercises and course contents are available in the instructors [`learngo`] repository
+All exercises and course contents are available in the instructors [learngo] repository
   
 
 ## Additional stuff...
