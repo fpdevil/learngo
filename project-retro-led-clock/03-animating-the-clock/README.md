@@ -18,36 +18,36 @@ The following are the steps to be followed in order to achieve the goal as per t
 
    (a) Get my library for clearing the screen:
 
-        ```go
-        go get -u github.com/inancgumus/screen
-        ```
+```go
+    go get -u github.com/inancgumus/screen
+```
 
    (b) Then, import it and call it in your code like this:
 
-        ```go
-        screen.Clear()
-        ```
+```go
+    screen.Clear()
+```
 
    (c) If you're using Go Playground instead, do this:
 
-        ```go
-        fmt.Println("\f")
-        ```
+```go
+    fmt.Println("\f")
+```
 
  4. Move the cursor to the top-left corner of the screen, before each step
     of the infinite loop
 
     * Call this in your code like this:
 
-        ```go
-        screen.MoveTopLeft()
-        ```
+```go
+    screen.MoveTopLeft()
+```
 
     * If you're using Go Playground instead, do this again:
 
-        ```go
-        fmt.Println("\f")
-        ```
+```go
+    fmt.Println("\f")
+```
 ---
 
 # Output of the code run.
