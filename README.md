@@ -1,7 +1,7 @@
 
 # Go (Golang): The Complete Bootcamp
 
-The excellent <a href=" https://udemy.com/course/learn-go-the-complete-bootcamp-course-golang" target="_blank" rel="noopener"><span>UDEMY</span></a> course on the `golang` development bootcamp.
+The excellent [udemy] course on the `golang` development bootcamp.
 
 Contains progress of my work in the course and the exercises...
 
