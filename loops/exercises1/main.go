@@ -11,13 +11,21 @@ import (
 func main() {
 	fmt.Println("==== Running Exercises from 13-loops ====")
 
-	problems.Exercise1()
-	problems.Exercise2()
-
 	var (
 		args = os.Args
 		l    = len(args)
 	)
+
+	// press Ctrl + C to get out
+	// problems.Exercise6()
+	if l > 1 && args[1] == "ex6" {
+		problems.Exercise6()
+	} else {
+		fmt.Println("skipping exercise6 for explicit invocation")
+	}
+
+	problems.Exercise1()
+	problems.Exercise2()
 
 	// go run main.go ex3 minval maxval
 	if l > 2 && args[1] == "ex3" {
@@ -40,13 +48,6 @@ func main() {
 		problems.Exercise5("")
 	}
 
-	// press Ctrl + C to get out
-	// problems.Exercise6()
-	if l > 2 && args[1] == "ex6" {
-		problems.Exercise6()
-	} else {
-		fmt.Println("skipping exercise6 for explicit invocation")
-	}
 
 	// go run main.go ex7 6
 	if l > 2 && args[1] == "ex7" {
