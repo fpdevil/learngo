@@ -38,13 +38,11 @@ The following are the steps to be followed in order to achieve the goal as per t
     of the infinite loop
 
     * Call this in your code like this:
-
 ```go
     screen.MoveTopLeft()
 ```
 
-    * If you're using Go Playground instead, do this again:
-
+   * If you're using Go Playground instead, do this again:
 ```go
     fmt.Println("\f")
 ```
