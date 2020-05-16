@@ -31,10 +31,12 @@ The following are the steps to be followed in order to achieve the goal as per t
  4. Move the cursor to the top-left corner of the screen, before each step of the infinite loop.
 
     * Call this in your code like this:
-    `screen.MoveTopLeft()`
 
-   * If you're using Go Playground instead, do this again:
-    `fmt.Println("\f")`
+        `screen.MoveTopLeft()`
+
+    * If using the `Go` Playground instead, perform the again:
+
+        `fmt.Println("\f")`
 
 ---
 
