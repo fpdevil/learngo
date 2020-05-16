@@ -94,6 +94,42 @@ fmt.Println(a, b, c, d)
 
 	All `nil` means is that there does not exist any particular value, but `nil` itself is the value. It's a special value which says there is no value.
 
++ **Composite Types**:
+	The following are the _composite types_ in `go`. They can store multiple values at the same time.
+	- _Arrays_
+	- _Slices_
+	- _String Internals_
+	- _Maps_
+	- _Structs_
+  Except _structs_ all the above types support index based element lookup.
+
+- **Arrays** and **Slices**
+	`Arrays` are a collection of elements (indexable) of fixed length. Length of an array is fixed and is determined at the compile time.
+	representation: `var variable_name [length]element_type`
+	eg: `var colors [7]string`
+	Also worth to note is that the length and element types of an array are inseparable parts of its type. The type of the colors array above is `[7]string` and not just `string`
+
+	`Slices` are similar to `Arrays`, but they are of dynamic length and can either grow or shrink as per demand.
+
+- **Keyed Elements**
+	Each key of the array corresponds to an _index_ of the array.
+	Here is an example in which we are using indexes inside the element list of the array literal.
+```go
+items = [3]float64 {
+	0: 1.5,				// key = 0 is the index of 1st element
+	1: 2.6,				// key = 1 is the index of 2nd element
+	2: 3.2,				// key = 2 is the index of 3rd element
+}
+```
+The keyed elements can now occur in any order as below.
+```go
+items = [3]float64 {
+	2: 3.2,				// key = 2 is the index of 3rd element
+	0: 1.5,				// key = 0 is the index of 1st element
+	1: 2.6,				// key = 1 is the index of 2nd element
+}
+```
+
 
 [repository]: <github.com/inancgumus/learngo>
 
