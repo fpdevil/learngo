@@ -1,7 +1,7 @@
 
 # Go (Golang): The Complete Bootcamp
-  
-[udemy] course on the `go` language.
+
+The excellent <a href=" https://udemy.com/course/learn-go-the-complete-bootcamp-course-golang" target="_blank" rel="noopener"><span>UDEMY</span></a> course on the `golang` development bootcamp.
 
 Contains progress of my work in the course and the exercises...
 
@@ -132,4 +132,4 @@ items = [3]float64 {
 
 [learngo]: https://github.com/inancgumus/learngo
 
-[udemy]: www.udemy.com/course/learn-go-the-complete-bootcamp-course-golang
+[udemy]: https://udemy.com/course/learn-go-the-complete-bootcamp-course-golang
