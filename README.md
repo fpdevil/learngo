@@ -137,7 +137,7 @@ items = [3]float64 {
 	The zero value of a slice is `nil`.
 
 	+ Appending the slices:
-	For appending two slices, always use the _ellipsis_ (`...`) operator as below
+	For appending two slices, always use the _ellipsis_ (`...`) operator as below, otherwise it will through an error.
 	```go
 	a := []int{1, 2, 3}
 	b := []int{4, 5}
