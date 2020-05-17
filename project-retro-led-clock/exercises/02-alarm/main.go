@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	// import this package for screen clear
 	"github.com/inancgumus/screen"
 )
 
@@ -49,11 +50,12 @@ import (
 // go run *.go
 
 func main() {
-	// clear the screen first
+	// clear the screen once.
 	screen.Clear()
 
 	// infinite loop
 	for {
+		// move the cursor to the top left
 		screen.MoveTopLeft()
 
 		t := time.Now()
@@ -67,7 +69,7 @@ func main() {
 			digits[second/10], digits[second%10],
 		}
 
-		// trigger alarm at every 10 seconds
+		// trigger alarm at every 10 seconds (we will get alarm for every 10th sec)
 		callalarm := second%10 == 0
 
 		if callalarm {

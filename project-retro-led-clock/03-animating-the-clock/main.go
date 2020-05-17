@@ -4,11 +4,12 @@ import (
 	"fmt"
 	"time"
 
-	// package for clearing the screen
+	// import this package for clearing the screen
 	"github.com/inancgumus/screen"
 )
 
 // STEP #3 — Animate the Clock
+// ---------------------------
 //  Create an infinite loop to update the clock
 //  Update the clock every second
 //  Clear the screen before the infinite loop
@@ -17,7 +18,7 @@ import (
 func main() {
 	fmt.Println("GOAL 3: Animate the Clock")
 
-	// named type for holding the digits
+	// define named type for holding the digits
 	type placeholder = [5]string
 
 	// Define  the  digits from  0  through  9 as  strings  of  size 5  using
@@ -127,12 +128,12 @@ func main() {
 		"   ",
 	}
 
-	// clear all the characters on the screen
+	// clear all the characters on the screen once
 	screen.Clear()
 
 	// creting an infinite loop for animating
 	for {
-		// Moves the cursor to the top-left position of the screen
+		// This moves the cursor to the top-left position of the screen
 		screen.MoveTopLeft()
 
 		// get the current time

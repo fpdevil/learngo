@@ -6,6 +6,7 @@ import (
 )
 
 // STEP #2 — Print the Clock
+// --------------------------
 //  Get the current time
 //  Create the clock array
 //  Print the clock
@@ -13,7 +14,7 @@ import (
 
 func main() {
 	fmt.Println("GOAL 2: Printing the Clock")
-	// name type fot holding the digits
+	// define a named type for holding the digits
 	type placeholder = [5]string
 
 	// Define the digits from 0 through 9 as strings

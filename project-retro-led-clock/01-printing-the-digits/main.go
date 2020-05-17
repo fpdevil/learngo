@@ -10,13 +10,14 @@ import "fmt"
 // 		- Draw clock using clock array
 // 		- Sleep for a second
 
-func main() {
-	fmt.Printf("GOAL 1: Printing the Digits...\n")
 	// [x] Goal 1 steps
 	// [x] Define a new placeholder type
 	// [x] Create the digit arrays from 0 to 9
 	// [x] Put them into the "digits" array
 	// [x] Print them side-by-side
+
+func main() {
+	fmt.Printf("GOAL 1: Printing the Digits...\n")
 
 	// defining a new placeholder type
 	type placeholder = [5]string

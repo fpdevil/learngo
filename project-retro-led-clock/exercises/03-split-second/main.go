@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	// import this package for screen clearing
 	"github.com/inancgumus/screen"
 )
 
@@ -109,11 +110,12 @@ import (
 // go run *.go
 
 func main() {
-	// clear the screen first
+	// clear the screen first for once
 	screen.Clear()
 
 	// infinite loop
 	for {
+		// move the cursor to the top left
 		screen.MoveTopLeft()
 
 		t := time.Now()
@@ -132,7 +134,7 @@ func main() {
 
 		for row := range clock[0] {
 			for index, digit := range clock {
-				// handle blinking of separator
+				// handle the blinking of separator
 				next := clock[index][row]
 				if (digit == sep || digit == period) && second%2 == 0 {
 					next = "   "

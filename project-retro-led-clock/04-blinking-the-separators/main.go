@@ -4,16 +4,17 @@ import (
 	"fmt"
 	"time"
 
-	// package for clearing the screen
+	// import package for clearing the screen
 	"github.com/inancgumus/screen"
 )
 
 // GOAL 4: Blinking the Separators
+// --------------------------------
 
 func main() {
 	fmt.Println("GOAL 4: Blinking the Separators")
 
-	// named type for holding the digits
+	// define a named type for holding the digits
 	type placeholder = [5]string
 
 	// Define  the  digits from  0  through  9 as  strings  of  size 5  using
