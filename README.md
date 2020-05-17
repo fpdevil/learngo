@@ -7,10 +7,8 @@ Contains progress of my work in the course and the exercises...
 
 ## Exercises and content
 
-
 All exercises and course contents are available in the instructors [learngo] repository
   
-
 ## Additional stuff...
 
 > Going through the `go` documentation from command line. We can use the `go doc` utility to read the `golang` documentation.
@@ -104,10 +102,12 @@ fmt.Println(a, b, c, d)
   Except _structs_ all the above types support index based element lookup.
 
 - **Arrays** and **Slices**
-	`Arrays` are a collection of elements (indexable) of fixed length. Length of an array is fixed and is determined at the compile time.
+	`Arrays` are a collection of elements (indexable) of fixed length. Length of an array is fixed and is determined at the compile time. Arrays cannot `grow` or `shrink`. `Go` being a statically typed language the size of the array specification is fixed during the compile time and cannot be changed thereafter. 
 	representation: `var variable_name [length]element_type`
 	eg: `var colors [7]string`
-	Also worth to note is that the length and element types of an array are inseparable parts of its type. The type of the colors array above is `[7]string` and not just `string`
+	Also worth to note is that the length and element types of an array are inseparable parts of its type. The type of the colors array above is `[7]string` and not just `string`.
+
+	Once an array is defined, it's length is fixed and always gives the same value regardless of whether the array is populated with values or not. This is because, once the array is defined all the places will be populated with their default zero values as per the array's type.
 
 	`Slices` are similar to `Arrays`, but they are of dynamic length and can either grow or shrink as per demand.
 
@@ -129,6 +129,21 @@ items = [3]float64 {
 	1: 2.6,				// key = 1 is the index of 2nd element
 }
 ```
+
+- **Slices**
+	Slices are the dynamic arrays of `go`. New elements can be added or existing elements removed from a slice during runtime.
+	Example: `var values []int`
+	The length or the size of the slice is left empty as that is dynamically updated during runtime unlike an array where the value is fixed during compile time.
+	The zero value of a slice is `nil`.
+
+	+ Appending the slices:
+	For appending two slices, always use the _ellipsis_ (`...`) operator as below
+	```go
+	a := []int{1, 2, 3}
+	b := []int{4, 5}
+	c := append(a, b...)
+	```
+	The _ellipsis_ operator sends the values of the slice as additional arguments to the variadic function append, there by apending the additional elements of the slice explicitly.
 
 [learngo]: https://github.com/inancgumus/learngo
 
