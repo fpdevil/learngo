@@ -41,5 +41,5 @@ func Exercise2() {
 	fmt.Printf("data     : %T %d %t\n", data, len(data), data == nil)
 	fmt.Printf("ratios   : %T %d %t\n", ratios, len(ratios), ratios == nil)
 	fmt.Printf("alives   : %T %d %t\n", alives, len(alives), alives == nil)
-
+	// the data is all given in this and it's just a matter of printing
 }

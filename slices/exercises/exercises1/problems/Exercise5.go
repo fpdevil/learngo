@@ -50,7 +50,8 @@ func Exercise5() {
 
 	// use the slicing expression to change the nums array to a slice below
 	// sort.Ints(nums)
-	sort.Ints(nums[:]) // converting to slice with [:]
+	// we will first convert the array to slice using [:]
+	sort.Ints(nums[:])
 
 	// -----------------------------------
 	// Here: Use the strings.Join function to join the names

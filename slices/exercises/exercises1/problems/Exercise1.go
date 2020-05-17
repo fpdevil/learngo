@@ -63,6 +63,7 @@ func Exercise1() {
 	fmt.Printf("ratio: %T %d %t\n", ratio, len(ratio), ratio == nil)
 	fmt.Printf("alives: %T %d %t\n", alives, len(alives), alives == nil)
 
+	// additional
 	fmt.Println()
 	fmt.Printf("names: %q\n", names)
 	fmt.Printf("distances: %d\n", distances)

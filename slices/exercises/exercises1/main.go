@@ -3,9 +3,11 @@ package main
 import (
 	"fmt"
 
+	// import the problems package containing exercises
 	"github.com/fpdevil/learngo/slices/exercises/exercises1/problems"
 )
 
+// this is the main function for running the exercises under 16-slices
 func main() {
 	fmt.Println("==== Running Exercises from 16-slices ====")
 

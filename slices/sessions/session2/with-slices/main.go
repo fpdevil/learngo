@@ -8,7 +8,8 @@ import (
 	"time"
 )
 
-// Unique random number generator
+// dividing into arbitrary sessions {session2}
+// Unique random number generator using slices
 func main() {
 	// create a random seed
 	rand.Seed(time.Now().UnixNano())

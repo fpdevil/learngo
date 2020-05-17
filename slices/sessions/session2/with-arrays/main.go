@@ -6,7 +6,8 @@ import (
 	"time"
 )
 
-// Unique random number generator
+// dividing into arbitrary sessions {session2}
+// Unique random number generator using arrays
 func main() {
 	rand.Seed(time.Now().UnixNano())
 

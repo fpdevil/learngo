@@ -27,7 +27,8 @@ func Exercise7() {
 	png, header := []byte{'P', 'N', 'G'}, []byte{}
 
 	// 2. append elements to header to make it equal with the png slice
-	header = append(header, png...) // ... unpacks png
+	// using the ellipsis operator ...to  unpack the png slice
+	header = append(header, png...)
 
 	// 3. compare the slices using the bytes.Equal function
 	var ok string

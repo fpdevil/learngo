@@ -54,6 +54,8 @@ func Exercise3() {
 	ratios = []float64{}
 	alives = []bool{}
 
+	// populate the calues into the slices as per the
+	// course exercise guidelines...
 	names = []string{
 		"Mickey Mouse",
 		"Donald Duck",

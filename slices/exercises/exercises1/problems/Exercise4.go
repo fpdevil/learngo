@@ -34,6 +34,7 @@ func Exercise4() {
 	alives := []bool{true, false, true, false}
 	zero := []byte{}
 
+	// print the details of populated slices
 	fmt.Printf("names    : %[1]T %[1]q\n", names)
 	fmt.Printf("distances: %[1]T %[1]d\n", distances)
 	fmt.Printf("data     : %[1]T %[1]d\n", data)

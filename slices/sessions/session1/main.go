@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// dividing into arbitrary sessions {session1}
 func main() {
 	// array of books
 	var books [5]string

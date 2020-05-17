@@ -46,7 +46,11 @@ func Exercise6() {
 	sort.Strings(sliceA)
 	sort.Strings(namesB)
 
+	// static value to use while print equality message
 	var ok string
+
+	// for comparing the slices, we will first check whether
+	// the lengths of the slices are same or not
 	if len(sliceA) == len(namesB) {
 		for i, v := range sliceA {
 			// fmt.Println(v, " = ", namesB[i])
@@ -59,6 +63,8 @@ func Exercise6() {
 
 	fmt.Printf("They are %sequal.\n", ok)
 
+	// alternate approach, but there is not place holder
+	// to print the message in case they are not equal
 	// if len(sliceA) == len(namesB) {
 	// 	for i := range sliceA {
 	// 		if sliceA[i] != namesB[i] {
