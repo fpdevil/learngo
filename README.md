@@ -138,12 +138,65 @@ items = [3]float64 {
 
 	+ Appending the slices:
 	For appending two slices, always use the _ellipsis_ (`...`) operator as below, otherwise it will through an error.
+
 	```go
 	a := []int{1, 2, 3}
 	b := []int{4, 5}
 	c := append(a, b...)
 	```
+
 	The _ellipsis_ operator sends the values of the slice as additional arguments to the variadic function append, there by apending the additional elements of the slice explicitly.
+
+	_note:_ appending slices will always result in a new slice; we have to save it over our original slice, or result of append would be lost.
+
+	_example_: here `x` will remain as is and `y` will get new values as shown below
+
+	```go
+	x := []int{6, 7, 8}
+	y := append(x, []int{11, 12, 13}...)
+
+	fmt.Println(x)
+	fmt.Println(y)
+
+	// this will print the below output
+	// [6 7 8]
+	// [6 7 8 11 12 13]
+	```
+
+	_A String is a `byte slice` behind the scenes._
+
+	+ Slicing an array, slice or a string
+	
+	representation:
+	```go
+	sliceable[start_position : end_position]
+	```
+	where,
+	`start_position` = *value from which slicing can be done* or can be considered as start slicing from the `index` position; so it can start from `0`.
+	`end_position` = *slice up till this value* or can be considered as slice till `(index + 1)`; so it should start from `1`.
+
+	_note_ : `slice`  expressions return a new slice derived from the original slice.
+
+	A `nil` slice does not have a backing array, so both it's length as well as capacity are `zero`.
+
+	* A view of the slice header: The slice header is a tiny datastructure containing the below metadata information.
+
+	_Pointer_
+
+	_Length_
+	
+	_Capacity_
+
+	* `make` function allows to create a slice with preallocated backing array of given capacity.
+	
+	```go
+	make([]Type, length, capacity)
+	
+	make([]int, 5)
+
+	s := make([]int, 0, 5)
+	```
+
 
 [learngo]: https://github.com/inancgumus/learngo
 
