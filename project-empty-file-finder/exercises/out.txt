@@ -1,0 +1,8 @@
+apples
+grapes
+mangoes
+muskmelon
+papaya
+pineapples
+prunes
+watermelon
