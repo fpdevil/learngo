@@ -96,7 +96,12 @@ func Exercise25() {
 		// adjust the offset value equal to iteration value for
 		// each iteration which is the value of i
 		copy(fix[previous+i:current+i], lyric[previous:current])
-		copy(fix[current+i:], []string{"\n"})
+
+		// as per Inanc comment (updated the copy of \n)
+		// You don't have to copy there, just change the slice's
+		// element by using an index expression.
+		// copy(fix[current+i:], []string{"\n"})
+		fix[current+i] = "\n"
 
 		// make the previous value same as current
 		previous = current
