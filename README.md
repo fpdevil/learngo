@@ -8,7 +8,7 @@ Contains progress of my work in the course and the exercises...
 ## Exercises and content
 
 All exercises and course contents are available in the instructors [learngo] repository
-  
+
 ## Additional stuff...
 
 > Going through the `go` documentation from command line. We can use the `go doc` utility to read the `golang` documentation.
@@ -102,7 +102,7 @@ fmt.Println(a, b, c, d)
   Except _structs_ all the above types support index based element lookup.
 
 - **Arrays** and **Slices**
-	`Arrays` are a collection of elements (indexable) of fixed length. Length of an array is fixed and is determined at the compile time. Arrays cannot `grow` or `shrink`. `Go` being a statically typed language the size of the array specification is fixed during the compile time and cannot be changed thereafter. 
+	`Arrays` are a collection of elements (indexable) of fixed length. Length of an array is fixed and is determined at the compile time. Arrays cannot `grow` or `shrink`. `Go` being a statically typed language the size of the array specification is fixed during the compile time and cannot be changed thereafter.
 	representation: `var variable_name [length]element_type`
 	eg: `var colors [7]string`
 	Also worth to note is that the length and element types of an array are inseparable parts of its type. The type of the colors array above is `[7]string` and not just `string`.
@@ -165,8 +165,35 @@ items = [3]float64 {
 
 	_A String is a `byte slice` behind the scenes._
 
+    A string value is a read only byte slice and cannot be manipulated directly. But it can be converted to a byte slice and updated and then converted back to string again.
+
+    * conversion of string to byte slice can be done easily as follows
+
+    ```go
+    str := "test"
+
+    // converting to byte
+    b := []byte(str)
+
+    // byte slice to string
+    newstr := string(b)
+    ```
+    The above essentially copies the bytes of string into the new byte slices underlying backing array. So, each of them maintain a separate backing array and changing one does not directly affect the other.
+
+    + counting the `runes`:
+
+    The `len` function counts only the number of bytes in a string or a byte slice. In order to count the number of `runes`, we have to use `RuneCount` or `RuneCountInString` function(s) from the `utf8` package.
+
+    ```go
+    // go doc spec
+    // RuneCount returns the number of runes in p. Erroneous and short encodings
+    // are treated as single runes of width 1 byte.
+
+    func RuneCount(p []byte) int
+    ```
+
 	+ Slicing an array, slice or a string
-	
+
 	representation:
 	```go
 	sliceable[start_position : end_position]
@@ -184,18 +211,21 @@ items = [3]float64 {
 	_Pointer_
 
 	_Length_
-	
+
 	_Capacity_
 
 	* `make` function allows to create a slice with preallocated backing array of given capacity.
-	
+
 	```go
 	make([]Type, length, capacity)
-	
+
 	make([]int, 5)
 
 	s := make([]int, 0, 5)
 	```
+
+- `rune` and `rune literal` can hold upto `4` bytes and is perfect for handling the `utf-8` encoded code point.
+
 
 
 [learngo]: https://github.com/inancgumus/learngo
