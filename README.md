@@ -27,6 +27,16 @@ if b {
 }
 ```
 
+The `godocc` package by [Inanc](https://github.com/inancgumus/godocc) has a better colorful tool for browsing the go documentation, which can be installed and accessed as below
+
+```bash
+# installation
+$ go get -u github.com/inancgumus/godocc
+
+# browse documentation
+$ GODOCC_STYLE="solarized-dark" godocc -all regexp/syntax
+```
+
 > using the `godoc` utility
 
 start a _http server_ and access the documentation in browser:
