@@ -234,9 +234,55 @@ items = [3]float64 {
 	s := make([]int, 0, 5)
 	```
 
-- `rune` and `rune literal` can hold upto `4` bytes and is perfect for handling the `utf-8` encoded code point.
+  - `rune` and `rune literal` can hold upto `4` bytes and is perfect for handling the `utf-8` encoded code point.
 
+- **Structs**:
+  
+  	Similar to `C`, `go` supports `structs` types. `Structs` allow us to represent custom data by declaring a blueprint for a set of related types in a single type.
 
+	We are essentially shaping our own types using the other types.
+
+	```go
+	type struct Person {
+		Name 		string			// these are the fields name field
+		Department 	string			// department fields
+		Id 			int				// id field
+	}
+
+	// or
+
+	type struct Person {
+		// we may define same datatypes in a single line
+		Name, Department 	string
+		Id 					int
+	}
+
+	// declarations
+	var p Person
+	// or
+	p := new(Person)
+	// or shorthand notation
+	// this is the struct literal
+	p := Person{ Name: "Dennis", Department: "Menace", Id: 1234 }
+	// or more concisely
+	p := Person{ "Dennis", "Menace", 1234 }
+	```
+
+	The `struct` type is fixed at the compile time and it's fields cannot be manipulated during runtime. However the field values can be changed during runtime.
+
+	The definition of a `struct` is usually composed of a _name_ and a _type_, while the number of the fields can be absent as well (`0`).
+
+	When the `struct` is defined into a variable using the `new` keyword, memory is allocated for the fields and each field will be set to it's respective zero value there by returning a pointer of the form `*Person`.
+
+	The fields of the struct may be accessed using the `.` nottation as below:
+
+	```go
+	p.Name = "Dennis"
+	p.Department = "Menace"
+	p.Id = 1234
+	```
+	
+	*If structs as declared at the package level, they can be used across the package which is a common practice.*
 
 [learngo]: https://github.com/inancgumus/learngo
 
