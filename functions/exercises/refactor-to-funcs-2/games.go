@@ -8,7 +8,9 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type item struct {
 	id    int
